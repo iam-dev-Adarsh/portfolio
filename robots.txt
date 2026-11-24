@@ -1,0 +1,5 @@
+# iam-dev-Adarsh.github.io/portfolio — let the recruiters in
+User-agent: *
+Allow: /
+
+Sitemap: https://iam-dev-Adarsh.github.io/portfolio/sitemap.xml

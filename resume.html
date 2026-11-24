@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Adarsh Singh — AI/ML Engineer · Resume</title>
+<meta name="description" content="Adarsh Singh — AI/ML engineer. B.Tech ECE (2026). First-principles machine learning, LLM systems, and production AI. Open to remote roles worldwide.">
+<link rel="icon" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ═══ Resume — Navy & Gold identity. Print: A4, 2 pages. ═══ */
+  @page{size:A4;margin:12mm}
+  *{box-sizing:border-box;margin:0;padding:0}
+  :root{
+    --ink:#0A1526; --muted:#5A6475; --line:#E3DCCF; --paper:#FAF8F5;
+    --gold:#B98A2F; --gold-soft:#F4EBD9; --slate:#41516B;
+    --mono:'JetBrains Mono',monospace; --sans:'Space Grotesk',sans-serif; --serif:'Instrument Serif',serif;
+  }
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:var(--sans);color:var(--ink);background:#E7E8EB;line-height:1.5;font-size:10pt}
+  .sheet{width:210mm;min-height:297mm;margin:22px auto;background:var(--paper);padding:15mm 16mm;
+    box-shadow:0 24px 70px rgba(20,30,50,.18)}
+  @media print{
+    body{background:#fff}
+    .sheet{width:auto;min-height:auto;margin:0;padding:0;box-shadow:none}
+    .no-print{display:none!important}
+    .page-break{break-before:page}
+    .entry, .proj, .cap{break-inside:avoid}
+  }
+
+  /* ── header ── */
+  header{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;
+    border-bottom:2.5px solid var(--ink);padding-bottom:12px}
+  .name{font-family:var(--serif);font-size:34pt;line-height:1;letter-spacing:.01em}
+  .name em{color:var(--gold)}
+  .role{font-family:var(--mono);font-size:8.5pt;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--slate);margin-top:7px}
+  .contact{text-align:right;font-size:8.6pt;line-height:1.85;color:var(--muted)}
+  .contact a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
+  .tagline{margin:10px 0 2px;font-family:var(--serif);font-style:italic;font-size:12.5pt;color:var(--gold)}
+
+  /* ── sections ── */
+  section{margin-top:16px}
+  h2{font-family:var(--mono);font-size:8.2pt;font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--ink);display:flex;align-items:center;gap:10px;margin-bottom:9px}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  h2 span{color:var(--gold)}
+
+  p.summary{font-size:9.6pt;line-height:1.68;color:#2B3648}
+  p.summary b{color:var(--ink)}
+
+  /* ── skills ── */
+  .skills{display:grid;grid-template-columns:1fr 1fr;gap:11px 26px}
+  .sk h3{font-size:8.6pt;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin-bottom:5px}
+  .sk h3 i{font-style:normal;color:var(--gold)}
+  .sk p{font-size:8.8pt;line-height:1.62;color:#2B3648}
+  .sk p b{color:var(--ink);font-weight:600}
+
+  /* ── featured projects ── */
+  .proj{margin-bottom:11px;padding:9px 12px;background:#fff;border:1px solid var(--line);
+    border-left:3px solid var(--gold);border-radius:6px}
+  .proj-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .proj h3{font-size:10.2pt;font-weight:700}
+  .proj h3 i{font-style:normal;color:var(--gold)}
+  .proj .tag{font-family:var(--mono);font-size:7.2pt;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--slate);background:var(--gold-soft);padding:2px 8px;border-radius:99px;white-space:nowrap}
+  .proj ul{margin-top:4px;padding-left:15px}
+  .proj li{font-size:8.9pt;line-height:1.58;color:#2B3648;margin-top:2px}
+  .proj li b{color:var(--ink)}
+  .stackline{margin-top:5px;font-family:var(--mono);font-size:7.4pt;letter-spacing:.04em;color:var(--slate)}
+
+  /* ── capstone series ── */
+  .caps{display:grid;grid-template-columns:1fr 1fr;gap:7px 20px}
+  .cap{display:flex;gap:9px;align-items:baseline}
+  .cap .n{font-family:var(--mono);font-size:8pt;font-weight:700;color:var(--gold);min-width:16px}
+  .cap .t{font-size:8.9pt;line-height:1.45}
+  .cap .t b{display:block;font-size:9.1pt}
+  .cap .t b a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--gold)}
+  .cap .t b a:hover{color:var(--gold)}
+  .cap .t span{color:#2B3648;font-size:8.3pt}
+  .demo-link{font-family:var(--mono);font-size:7.2pt;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);white-space:nowrap}
+
+  /* ── deep-ml ── */
+  .dml-stats{display:flex;gap:22px;margin-bottom:8px}
+  .dml-stats div{border-left:2px solid var(--gold);padding-left:10px}
+  .dml-stats strong{font-family:var(--serif);font-size:15pt;line-height:1;display:block}
+  .dml-stats small{font-size:7.8pt;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .algos{font-size:8.8pt;line-height:1.7;color:#2B3648}
+  .algos b{color:var(--ink)}
+  .chip{display:inline-block;font-family:var(--mono);font-size:7.3pt;padding:1.5px 7px;margin:1.5px 2px 1.5px 0;
+    border:1px solid var(--line);border-radius:99px;color:var(--slate);background:#fff;white-space:nowrap}
+
+  /* ── education & extras ── */
+  .entry{display:flex;justify-content:space-between;gap:14px;margin-bottom:8px}
+  .entry h3{font-size:10pt}
+  .entry .when{font-family:var(--mono);font-size:8pt;color:var(--slate);white-space:nowrap}
+  .entry p{font-size:8.8pt;color:#2B3648;margin-top:2px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:8px 26px}
+  .two h3{font-size:9.4pt;font-weight:700;margin-bottom:3px}
+  .two p, .two li{font-size:8.7pt;line-height:1.6;color:#2B3648}
+  .two ul{padding-left:15px}
+
+  footer{margin-top:16px;border-top:1px solid var(--line);padding-top:8px;
+    font-family:var(--mono);font-size:7.2pt;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+    display:flex;justify-content:space-between}
+
+  .print-btn{position:fixed;right:22px;bottom:22px;background:var(--ink);color:var(--paper);
+    border:0;border-radius:99px;padding:12px 22px;font-family:var(--sans);font-size:12px;font-weight:600;
+    cursor:pointer;box-shadow:0 12px 30px rgba(10,21,38,.3);z-index:10}
+
+  /* ── phone / tablet fit (must come last: base rules override earlier media blocks) ── */
+  @media(max-width:840px){
+    .sheet{width:auto;min-height:auto;margin:12px;padding:26px 20px}
+  }
+  @media(max-width:640px){
+    header{flex-direction:column;align-items:flex-start;gap:10px}
+    .contact{text-align:left}
+    .name{font-size:26pt}
+    .skills,.caps,.two{grid-template-columns:1fr}
+    .dml-stats{flex-wrap:wrap;gap:12px}
+    .proj-head{flex-direction:column;gap:4px}
+  }
+</style>
+</head>
+<body>
+<button class="print-btn no-print" onclick="window.print()">⤓ Download / Print PDF</button>
+
+<div class="sheet">
+
+<header>
+  <div>
+    <h1 class="name">Adarsh <em>Singh</em></h1>
+    <div class="role">AI / ML Engineer &nbsp;·&nbsp; Machine Learning from First Principles</div>
+  </div>
+  <div class="contact">
+    <a href="mailto:iamvoid03@gmail.com">iamvoid03@gmail.com</a><br>
+    <a href="https://github.com/iam-dev-Adarsh">github.com/iam-dev-Adarsh</a><br>
+    <a href="https://iam-dev-Adarsh.github.io/portfolio">iam-dev-Adarsh.github.io/portfolio</a><br>
+    <a href="https://wa.me/919439440544"><svg viewBox="0 0 24 24" width="11" height="11" style="vertical-align:-1px;margin-right:3px" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>+91 94394 40544 · WhatsApp</a><br>
+    India · UTC+5:30 · open to remote (EU / US overlap)
+  </div>
+</header>
+
+<div class="tagline">“I don't use black boxes. I open them.”</div>
+
+<section>
+  <p class="summary">
+    <b>AI/ML engineer and 2026 B.Tech (ECE) graduate</b> with a first-principles foundation in machine learning:
+    algorithms rebuilt from scratch in NumPy, neural networks trained and debugged by hand, and LLM systems
+    taken from tokenization to production serving. Completed a <b>full AI engineering curriculum</b>
+    (11 end-to-end capstones covering classical ML through production AI) and the <b>Deep-ML Deep-Path</b> deep dive —
+    a 112-concept, 3,185-step curriculum from classical ML through LLMs, RL, inference engineering and CUDA
+    (<span data-live="solved">30</span> problem solutions written by hand so far). Comfortable owning the full lifecycle —
+    data → training → evaluation → deployment → monitoring — and writing clear technical notes along the way.
+    Seeking <b>remote junior AI engineering roles</b> with international teams.
+  </p>
+</section>
+
+<section>
+  <h2><span>01</span> Skills &amp; Stack</h2>
+  <div class="skills">
+    <div class="sk">
+      <h3>AI Engineering</h3>
+      <p><b>ML:</b> regression &amp; classification, decision trees, ensembles, clustering (k-means), SVM, kNN,
+      feature engineering, EDA, train/val/test design, cross-validation, hyperparameter search, class-imbalance handling, fairness checks.</p>
+    </div>
+    <div class="sk">
+      <h3>LLM &amp; Agents</h3>
+      <p><b>Modern LLM stack:</b> tokenization, embeddings, self-attention &amp; transformers, small-GPT training,
+      prompting (few-shot, chain-of-thought, structured output), prompt evaluation harnesses,
+      semantic search &amp; RAG (chunking, cosine retrieval), agents &amp; tool use (function calling, planning loops).</p>
+    </div>
+    <div class="sk">
+      <h3>Serving &amp; Production AI</h3>
+      <p><b>Deployment:</b> FastAPI model services, REST inference endpoints, latency &amp; throughput trade-offs,
+      batching, model fallbacks &amp; retries, uptime &amp; latency budgets, monitoring, offline evaluation pipelines, reproducibility (seeding).</p>
+    </div>
+    <div class="sk">
+      <h3>Foundations <i>· Deep-ML + first principles</i></h3>
+      <p><b>Math &amp; internals:</b> linear algebra (SVD, QR, Cholesky, eigendecomposition, PCA), matrix calculus,
+      gradient descent &amp; optimizers, backpropagation, loss functions, convolutions, attention math,
+      L1/L2 regularization, dropout — <b>implemented, not imported</b>.</p>
+    </div>
+    <div class="sk">
+      <h3>Languages &amp; Libraries</h3>
+      <p><b>Python</b> (primary), NumPy, Pandas, Matplotlib, scikit-learn, TensorFlow / Keras, PyTorch,
+      FastAPI, Git &amp; GitHub Actions, Linux, SQL basics.</p>
+    </div>
+    <div class="sk">
+      <h3>Engineering Practice</h3>
+      <p><b>How I work:</b> experiment logs &amp; reproducible runs, metric-driven evaluation, clean project
+      structure &amp; documentation, CI workflows, learning in public with written technical notes.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span>02</span> Featured Projects</h2>
+
+  <div class="proj">
+    <div class="proj-head">
+      <h3>Small GPT on Shakespeare <i>· from scratch</i></h3>
+      <span class="tag">LLM · Training</span>
+    </div>
+    <ul>
+      <li>Built a decoder-only transformer end-to-end: <b>tokenizer → embeddings → masked self-attention → training loop → text generation</b>, implemented from first principles.</li>
+      <li>Trained on the Shakespeare corpus; verified learning curves, sampling with temperature, and overfitting controls; documented the full derivation.</li>
+    </ul>
+    <div class="stackline">PYTHON · NUMPY / PYTORCH · ATTENTION · TOKENIZATION · SAMPLING</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <h3>Semantic Search &amp; RAG Prototype</h3>
+      <span class="tag">Retrieval · Embeddings</span>
+    </div>
+    <ul>
+      <li>Implemented an <b>embedding-based retrieval system</b>: document chunking, embedding generation, cosine-similarity ranking, and a retrieval-augmented answer path.</li>
+      <li>Evaluated retrieval quality with an offline test set and analyzed failure cases (chunk size, overlap, embedding choice).</li>
+    </ul>
+    <div class="stackline">EMBEDDINGS · COSINE RETRIEVAL · CHUNKING · OFFLINE EVAL</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <h3>Production ML Service with Fallback</h3>
+      <span class="tag">Serving · Reliability</span>
+    </div>
+    <ul>
+      <li>Shipped a model behind a <b>FastAPI</b> service: inference endpoints, health checks, validation, batching, and structured error handling.</li>
+      <li>Added <b>fallback model + retry policy</b> with latency/uptime budgets and monitoring hooks — the service degrades gracefully instead of failing.</li>
+    </ul>
+    <div class="stackline">FASTAPI · REST · BATCHING · FALLBACKS · MONITORING</div>
+  </div>
+
+  <div class="proj">
+    <div class="proj-head">
+      <h3>Deep-Learning Builds <i>· python-ai-projects</i></h3>
+      <span class="tag">CV · RL · NLP</span>
+    </div>
+    <ul>
+      <li><b>CIFAR-10 CNN classifier</b> — custom architecture, <b>63.32% test accuracy</b>; full training/eval loop with learning-curve analysis.</li>
+      <li><b>NEAT neuroevolution on Flappy Bird</b> — fitness improved <b>2,604 → 6,245</b> across generations through controlled evolutionary runs.</li>
+      <li><b>LSTM character-level text generator</b> — trained on 1.1M characters; runs inference in the browser.</li>
+      <li><b>Car price predictor</b> — end-to-end regression pipeline, <b>99.33%</b> accuracy on held-out data with feature-engineering iterations.</li>
+    </ul>
+    <div class="stackline">TENSORFLOW / KERAS · OPENCV · NUMPY · SCIKIT-LEARN</div>
+  </div>
+</section>
+
+<section class="page-break">
+  <h2><span>03</span> AI Engineering Capstone Series <i style="font-family:var(--serif);text-transform:none;letter-spacing:0;font-size:10pt;color:var(--slate)">— 11 end-to-end projects</i></h2>
+  <div class="caps" id="caps-grid">
+    <div class="cap"><div class="n">01</div><div class="t"><b>Bank Marketing Model</b><span>End-to-end classical ML: EDA → baselines → logistic regression &amp; decision trees → accuracy, precision, recall, F1, confusion matrix → business-framed conclusion.</span></div></div>
+    <div class="cap"><div class="n">02</div><div class="t"><b>Loan Default Risk</b><span>Imbalanced classification: train/val/test design, class-imbalance handling, threshold tuning, and a fairness check across groups.</span></div></div>
+    <div class="cap"><div class="n">03</div><div class="t"><b>Gradient Descent from Scratch</b><span>Vectorized gradient descent on linear &amp; logistic regression; feature scaling, convergence analysis, step-size behaviour.</span></div></div>
+    <div class="cap"><div class="n">04</div><div class="t"><b>Feedforward Neural Network from Scratch</b><span>Backpropagation in NumPy — a digit classifier built without any framework, with hand-derived gradients.</span></div></div>
+    <div class="cap"><div class="n">05</div><div class="t"><b>Small GPT on Shakespeare</b><span>Tokenization, embeddings, masked self-attention, training loop, and sampling — a working language model.</span></div></div>
+    <div class="cap"><div class="n">06</div><div class="t"><b>ML Service with FastAPI</b><span>A trained model exposed as a REST service: inference endpoint, validation, health checks, deployment workflow.</span></div></div>
+    <div class="cap"><div class="n">07</div><div class="t"><b>Prompting Evaluation Harness</b><span>Systematic prompt comparison: variants, labelled dataset, scoring pipeline, and a results table that picks winners objectively.</span></div></div>
+    <div class="cap"><div class="n">08</div><div class="t"><b>Offline Evaluation Pipeline</b><span>Model comparison with metric pipelines and reporting; regression error analysis and confusion-matrix interpretation.</span></div></div>
+    <div class="cap"><div class="n">09</div><div class="t"><b>Semantic Search / RAG</b><span>Embeddings, cosine retrieval, chunking strategies, and a retrieval-augmented generation prototype with an evaluation set.</span></div></div>
+    <div class="cap"><div class="n">10</div><div class="t"><b>Agent with Tool Use</b><span>Function calling, tool loop, planning behaviour, and an agentic evaluation covering common failure cases.</span></div></div>
+    <div class="cap"><div class="n">11</div><div class="t"><b>Production AI System</b><span>Model service with fallbacks: retries, secondary model, latency &amp; uptime budgets, and operational monitoring.</span></div></div>
+    <div class="cap"><div class="n">＋</div><div class="t"><b>Explainable Regression Model</b><span>Track project: a regression model that explains its predictions — error analysis and interpretable outputs.</span></div></div>
+  </div>
+</section>
+
+<section>
+  <h2><span>04</span> The Deep-Path <i style="font-family:var(--serif);text-transform:none;letter-spacing:0;font-size:10pt;color:var(--slate)">— Deep-ML deep dive · 5 zones · 112 concepts</i></h2>
+  <div class="dml-stats">
+    <div><strong data-live="solved">30</strong><small>problems solved</small></div>
+    <div><strong data-live="algos">12</strong><small>algorithms from scratch</small></div>
+    <div><strong>100%</strong><small>hand-derived &amp; documented</small></div>
+  </div>
+  <p class="algos" data-live="diff" style="margin-bottom:7px"><b>Difficulty mix:</b> 13 easy · 14 medium · 3 hard</p>
+  <p class="algos"><b>Implemented from scratch in NumPy</b> (The-first-prinicple): <span id="algo-chips">
+    <span class="chip">Polynomial Features (vectorized)</span><span class="chip">StandardScaler</span>
+    <span class="chip">K-Nearest Neighbors</span><span class="chip">Linear Regression (Gradient Descent)</span>
+    <span class="chip">Logistic Regression (Gradient Descent)</span><span class="chip">Support Vector Machine</span>
+    <span class="chip">K-Means Clustering</span><span class="chip">PCA (Covariance Method)</span>
+    <span class="chip">Neural Network Backpropagation</span><span class="chip">L1 / L2 Regularization</span>
+    <span class="chip">Dropout</span><span class="chip">Convolutions (valid &amp; same padding)</span></span></p>
+  <p class="algos" style="margin-top:5px"><b>The Deep-Path</b> — the full structured curriculum: 5 depth zones · 14 chapters · 112 concepts · 3,185 steps,
+    from <b>classical ML → deep learning → LLMs &amp; diffusion → reinforcement learning &amp; GNNs → inference engineering, CUDA &amp; Triton, ML compilers, AI safety</b> → toolboxes (SQL/pandas, algorithms, robotics, math drills).
+    My solutions cover linear algebra &amp; matrix decompositions (SVD, QR, Cholesky, eigendecomposition), gradient-based optimization,
+    loss functions &amp; evaluation metrics, attention mechanisms, and backpropagation — each written by hand and explained.</p>
+</section>
+
+<section>
+  <h2><span>05</span> Education &amp; Certifications</h2>
+  <div class="entry">
+    <div>
+      <h3>B.Tech in Electronics &amp; Communication Engineering (ECE)</h3>
+      <p><b>Dr. A.P.J. Abdul Kalam Technical University (AKTU)</b>, Uttar Pradesh, India<br>
+      Graduated 2026. Capstone self-study alongside the degree: machine learning from first principles
+        (linear algebra → neural networks → LLM systems), documented in public.</p>
+    </div>
+    <div class="when">2022 — 2026</div>
+  </div>
+  <div class="two">
+    <div>
+      <h3>AI Engineering — Full Curriculum Track</h3>
+      <p>Full curriculum: classical ML, neural networks, tokens &amp; embeddings, transformers, training &amp; tuning,
+        inference &amp; serving, prompting, evaluation, search &amp; retrieval (RAG), agents, production AI —
+        with 11 graded capstone projects.</p>
+    </div>
+    <div>
+      <h3>Deep-ML — Deep-Path Deep Dive</h3>
+      <p>Following the Deep-Path: 112 concepts · 3,185 steps across 5 depth zones — classical ML, deep learning,
+        LLMs &amp; diffusion, RL &amp; GNNs, then inference engineering, CUDA/Triton and ML compilers.
+        <span data-live="solved">30</span> problem solutions in machine learning internals — matrix methods, optimization,
+        regularization, convolution, attention, and backpropagation — each implemented from scratch, not with libraries.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2><span>06</span> Languages &amp; Working Style</h2>
+  <div class="two">
+    <div>
+      <h3>Languages</h3>
+      <p>English (professional working proficiency) · Hindi (native)</p>
+    </div>
+    <div>
+      <h3>How I operate</h3>
+      <ul>
+        <li>Remote-first; overlap with EU and US time zones</li>
+        <li>Written communicator — experiment logs, technical notes, clear READMEs</li>
+        <li>Learning in public: every project published with its derivations and results</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>Adarsh Singh — AI/ML Engineer</span>
+  <span id="live-stamp">STATIC SNAPSHOT</span>
+  <span>github.com/iam-dev-Adarsh</span>
+</footer>
+
+</div>
+<script src="resume-live.js"></script>
+</body>
+</html>

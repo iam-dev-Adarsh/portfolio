@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="precision">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Adarsh Singh — AI/ML Engineer | Machine Learning from First Principles</title>
+<meta name="description" content="Adarsh Singh — AI & machine learning engineer building models from first principles: derivations, hand-written implementations and measured results."/>
+<meta name="author" content="Adarsh Singh"/>
+<meta name="theme-color" content="#EDEEF1"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Adarsh Singh"/>
+<meta property="og:title" content="Adarsh Singh — I don't use black boxes. I open them."/>
+<meta property="og:description" content="AI/ML engineering from first principles: 30 Deep-ML problems, 12 algorithms from scratch, deep-learning projects with measured results."/>
+<meta property="og:image" content="assets/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:url" content="https://iam-dev-Adarsh.github.io/portfolio/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Adarsh Singh — I don't use black boxes. I open them."/>
+<meta name="twitter:description" content="AI/ML engineering from first principles."/>
+<meta name="twitter:image" content="assets/og.png"/>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Adarsh Singh","alternateName":"iam-dev-Adarsh","url":"https://github.com/iam-dev-Adarsh","email":"mailto:iamvoid03@gmail.com","jobTitle":"AI/ML Engineer (in training)","description":"Builds machine learning from first principles: derivations, hand-written implementations and measured results. Training on the Deep-ML deep dive and a structured AI engineering curriculum.","knowsAbout":["Machine Learning","Deep Learning","Neural Networks","Python","Linear Algebra","TensorFlow","Computer Vision","Natural Language Processing","Reinforcement Learning"],"sameAs":["https://github.com/iam-dev-Adarsh","https://iam-dev-Adarsh.github.io/deep-ml/"],"knowsLanguage":["en"],"seeking":"Internships and collaborations in AI/ML engineering"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Adarsh Singh — Portfolio","url":"https://iam-dev-Adarsh.github.io/portfolio/","description":"AI/ML portfolio: projects, write-ups, live demos and experiments log.","author":{"@type":"Person","name":"Adarsh Singh"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&family=Space+Grotesk:wght@300..700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<a class="skip" href="#work">Skip to content</a>
+<div id="preloader" aria-hidden="true"><div class="pre-inner"><div class="pre-logo">AS<span>®</span></div><div class="pre-count">0%</div><div class="pre-bar"><i></i></div><p>INITIALISING WEIGHTS</p></div></div>
+
+<div class="grid-overlay" aria-hidden="true"></div>
+<div class="noise" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"><i></i><i></i><span>VIEW</span></div>
+<canvas id="nn-canvas" aria-hidden="true"></canvas>
+<div class="orb orb-a" aria-hidden="true"></div><div class="orb orb-b" aria-hidden="true"></div>
+
+<header id="nav">
+  <a class="logo" href="#top">ADARSH<em>SINGH</em><sup>®</sup></a>
+  <nav class="links" aria-label="Primary">
+    <a href="#training">Training</a><a href="#work">Work</a><a href="#notes">Notes</a><a href="#demos">Demos</a><a href="#experiments">Log</a><a href="#live">Live</a>
+  </nav>
+  <div class="nav-actions">
+    <svg class="prog-ring" id="prog-ring" viewBox="0 0 36 36" aria-hidden="true"><circle class="pr-bg" cx="18" cy="18" r="15"/><circle class="pr-fg" id="pr-fg" cx="18" cy="18" r="15"/></svg>
+    <button id="palette-btn" class="kbd-btn" aria-label="Open command palette"><span>⌘K</span></button>
+    <button id="theme-btn" aria-label="Toggle theme">◐</button>
+    <a href="#contact" class="btn btn-sm magnetic">Contact <span>↗</span></a>
+    <button id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+</header>
+<div id="mobile-menu"><a href="#training">Training</a><a href="#work">Work</a><a href="#notes">Notes</a><a href="#demos">Demos</a><a href="#experiments">Log</a><a href="#live">Live</a><a href="#contact">Contact</a></div>
+
+<main id="top">
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="fig-label"><span>FIG. 1.0</span> THE THESIS</div>
+    <div class="hero-badge reveal"><span class="pulse"></span> Open to internships &amp; collaborations — <b id="cfg-availability">Now</b></div>
+    <div class="stage-wrap reveal" id="stage-wrap"></div>
+    <h1 class="hero-title">
+      <span class="line"><span>I DON'T USE</span></span>
+      <span class="line"><span class="stroke">BLACK BOXES.</span></span>
+      <span class="line"><span>I OPEN <em class="grad">THEM.</em></span></span>
+    </h1>
+    <div class="hero-row">
+      <p class="hero-sub reveal"><span class="serif">I'm <b id="cfg-name">Adarsh Singh</b></span> — an <span id="rotator">AI/ML engineer in training</span>. <span id="stage-line">I rebuild machine learning from the ground up — the linear algebra, the gradients, the algorithms — while training on two paths: the Deep-ML deep dive and a structured AI engineering curriculum.</span></p>
+      <div class="hero-cta reveal">
+        <a href="#work" class="btn magnetic">See the work <span>↓</span></a>
+        <a href="https://github.com/iam-dev-Adarsh" target="_blank" rel="noopener" class="btn btn-ghost magnetic">GitHub <span>↗</span></a>
+      </div>
+    </div>
+
+    <div class="hero-grid">
+      <!-- model card -->
+      <div class="hero-card reveal" id="tilt-card">
+        <div class="card-glare"></div>
+        <div class="mc-head"><span class="mc-dot"></span> MODEL CARD <em>v2026.11</em></div>
+        <div class="mc-body">
+          <div class="avatar">AS</div>
+          <div>
+            <h3 id="cfg-name2">Adarsh Singh</h3>
+            <p id="cfg-role">AI/ML Engineer · first-principles learner</p>
+          </div>
+        </div>
+        <dl class="mc-vitals">
+          <div><dt>Task</dt><dd>Supervised · Unsupervised · RL</dd></div>
+          <div><dt>Stack</dt><dd>Python · NumPy · TF/Keras</dd></div>
+          <div><dt>Location</dt><dd id="cfg-location">Remote-first</dd></div>
+          <div><dt>Stage</dt><dd class="ok" id="cfg-stage">In training · learning daily</dd></div>
+          <div><dt>Score</dt><dd id="cfg-score">—</dd></div>
+          <div><dt>Track A</dt><dd>Deep-ML deep dive</dd></div>
+          <div><dt>Track B</dt><dd>AI engineering curriculum</dd></div>
+        </dl>
+        <div class="card-tags"><span>Python</span><span>NumPy</span><span>TensorFlow</span><span>OpenCV</span></div>
+      </div>
+
+      <!-- token sampler -->
+      <div class="sampler reveal" aria-hidden="true">
+        <div class="sm-head"><span class="mc-dot alt"></span> NEXT-TOKEN PREDICTION <em>temperature 0.7</em></div>
+        <div class="sm-prompt"><span class="sm-ctx">Adarsh Singh is an </span><b id="sm-out"></b><span class="caret"></span></div>
+        <div class="sm-bars" id="sm-bars"></div>
+        <p class="sm-note">Illustrative of what I build — not a live model.</p>
+      </div>
+    </div>
+
+    <div class="stats reveal">
+      <div><strong><span class="count" data-live="problems" data-to="30">0</span></strong><small>Deep-ML problems solved</small></div>
+      <div><strong><span class="count" data-live="algos" data-to="12">0</span>+</strong><small>Algorithms from scratch</small></div>
+      <div><strong><span class="count" data-live="projects" data-to="4">0</span></strong><small>Deep-learning builds</small></div>
+      <div><strong><span class="count" data-live="repos" data-to="3">0</span></strong><small>Public repos</small></div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- ══ ABSTRACT ══ -->
+  <section id="abstract" class="section">
+    <div class="fig-label"><span>FIG. 2.0</span> ABSTRACT</div>
+    <div class="abstract">
+      <p class="abstract-lead reveal"><span class="drop">M</span>ost people call a library and move on. I want to know what happens inside it.</p>
+      <p class="reveal">So I derive the math, write the gradient, break it, fix it — and only then trust it. Every claim on this page links to code you can run, a derivation you can follow, and a run log you can read. <em class="grad-ink">I dare to remove IM from IMPOSSIBLE.</em></p>
+      <div class="abstract-meta reveal">
+        <div><span>Field</span>Machine learning · deep learning</div>
+        <div><span>Method</span>First principles · implementation-led</div>
+        <div><span>Evidence</span>Runnable repos · captured results</div>
+      </div>
+    </div>
+    <div class="chip-cloud reveal" id="chips"></div>
+  </section>
+  <!-- ══ TRAINING PATHS ══ -->
+  <section id="training" class="section">
+    <div class="fig-label"><span>FIG. 3.0</span> TRAINING PATHS</div>
+    <div class="sec-head reveal"><h2>What I'm <em>training on</em></h2><p>Two parallel tracks. One teaches me how models work from the math up; the other how real AI systems are built, run and measured in production.</p></div>
+    <div class="tracks" id="tracks"></div>
+    <div class="capstones reveal" id="capstones"></div>
+    <div class="resume-row reveal">
+      <a class="btn magnetic" href="resume.html" target="_blank" rel="noopener">View résumé <span>↗</span></a>
+      <button class="btn btn-ghost" id="print-resume">Print / Save as PDF</button>
+      <span class="resume-hint">One page · always current · updates with the site</span>
+    </div>
+  </section>
+  <!-- ══ WORK ══ -->
+  <section id="work" class="section">
+    <div class="fig-label"><span>FIG. 4.0</span> SELECTED WORKS</div>
+    <div class="sec-head reveal"><h2>Proof of <em>understanding</em></h2><p>Not tutorials. Implementations I wrote, debugged and explained myself.</p></div>
+    <div class="filters reveal" role="tablist"><button class="active" data-f="all">All</button><button data-f="found">Foundations</button><button data-f="dl">Deep Learning</button><button data-f="cv">Computer Vision</button><button data-f="nlp">NLP</button></div>
+    <div class="projects" id="projects"></div>
+    <p class="live-link reveal">↳ Deep-ML progress also auto-generates a <a href="https://iam-dev-Adarsh.github.io/deep-ml/" target="_blank" rel="noopener">live coverage portfolio</a> that replays every problem I solve.</p>
+  </section>
+  <!-- ══ AUTO INDEX ══ -->
+  <section id="lab" class="section">
+    <div class="fig-label"><span>FIG. 4.2</span> SELF-INDEXING LAB</div>
+    <div class="sec-head reveal"><h2>The lab <em>indexes itself</em></h2><p>Every repository is read live from GitHub. New work appears here automatically — artwork, categorisation and metadata generated on the fly.</p></div>
+    <div class="auto-note reveal" id="auto-note"><span class="live-dot"></span> <span id="auto-status">Reading the GitHub API…</span></div>
+    <h3 class="auto-h">Repositories</h3>
+    <div class="repo-grid" id="repo-grid"></div>
+    <h3 class="auto-h">Algorithms &amp; builds <span class="auto-sub">— every folder I add to my repos appears here automatically</span></h3>
+    <div class="auto-grid" id="algo-grid"></div>
+  </section>
+  <!-- ══ WRITE-UPS ══ -->
+  <section id="notes" class="section">
+    <div class="fig-label"><span>FIG. 5.0</span> LAB NOTES</div>
+    <div class="sec-head reveal"><h2>Write-ups that go <em>deep</em></h2><p>Every project gets a real write-up: the problem, the derivation, the measured result, and — crucially — where it breaks.</p></div>
+    <div class="notes-grid" id="notes-grid"></div>
+    <div class="note-modal" id="note-modal" aria-hidden="true">
+      <div class="note-panel">
+        <button class="note-close" id="note-close" aria-label="Close write-up">✕</button>
+        <article id="note-body"></article>
+      </div>
+    </div>
+  </section>
+  <!-- ══ DEMOS ══ -->
+  <section id="demos" class="section">
+    <div class="fig-label"><span>FIG. 6.0</span> LIVE DEMOS</div>
+    <div class="sec-head reveal"><h2>Models you can <em>poke</em></h2><p>Two tiny models running entirely in your browser — no server, no libraries. Train them, type into them, break them.</p></div>
+    <div class="demos-grid">
+      <div class="demo-card reveal">
+        <div class="demo-head"><span class="mc-dot"></span> DEMO A — NEURAL NETWORK PLAYGROUND <em id="nn-status">idle</em></div>
+        <canvas id="nn-demo" width="760" height="380"></canvas>
+        <div class="demo-controls">
+          <button class="btn btn-sm" id="nn-train">▶ Train</button>
+          <button class="btn btn-sm btn-ghost" id="nn-reset">↺ Reset</button>
+          <button class="btn btn-sm btn-ghost" id="nn-dataset">Switch dataset</button>
+          <span class="demo-read">epoch <b id="nn-epoch">0</b> · loss <b id="nn-loss">—</b></span>
+        </div>
+        <p class="demo-note">A 2&#8594;8&#8594;1 network with tanh activations, trained live with plain JS gradient descent. Click the canvas to add your own points.</p>
+      </div>
+      <div class="demo-card reveal">
+        <div class="demo-head"><span class="mc-dot alt"></span> DEMO B — NEXT-TOKEN PROBABILITIES <em>bigram model</em></div>
+        <div class="tokenizer">
+          <input id="tok-input" type="text" value="I dare to remove" spellcheck="false" autocomplete="off"/>
+          <div class="tok-out" id="tok-out"></div>
+          <div class="tok-bars" id="tok-bars"></div>
+        </div>
+        <p class="demo-note">A real bigram language model, trained in your browser on a bundled Shakespeare corpus. Type anything — probabilities are computed live.</p>
+      </div>
+    </div>
+  </section>
+  <!-- ══ EXPLORER ══ -->
+  <section id="explorer" class="section">
+    <div class="fig-label"><span>FIG. 6.2</span> ALGORITHM EXPLORER</div>
+    <div class="sec-head reveal"><h2>Algorithms, <em>animated</em></h2><p>The same ideas I implemented from scratch — shown doing their actual work, beside the core line of code that makes it happen.</p></div>
+    <div class="explorer reveal">
+      <div class="explorer-tabs" id="explorer-tabs"></div>
+      <div class="explorer-body">
+        <canvas id="explorer-canvas" width="760" height="420"></canvas>
+        <div class="explorer-side">
+          <h3 id="explorer-title">Gradient Descent</h3>
+          <p id="explorer-desc"></p>
+          <pre class="code-in" id="explorer-code"></pre>
+          <div class="explorer-slider">
+            <label id="explorer-label">learning rate</label>
+            <input type="range" id="explorer-range" min="1" max="100" value="45"/>
+            <span id="explorer-val">0.45</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ══ EMBEDDING MAP ══ -->
+  <section id="embedding" class="section">
+    <div class="fig-label"><span>FIG. 7.0</span> LATENT SPACE</div>
+    <div class="sec-head reveal"><h2>Where I sit in the <em>latent space</em></h2><p>Each point is a skill, projected into two dimensions. Clusters are what I'm fluent in; the sparse regions are honest.</p></div>
+    <div class="embed-wrap reveal">
+      <svg id="embed-svg" viewBox="0 0 900 460" role="img" aria-label="Skill embedding map"></svg>
+      <div class="embed-legend" id="embed-legend"></div>
+    </div>
+    <div class="skills reveal" id="skills"></div>
+  </section>
+  <!-- ══ METHODS ══ -->
+  <section id="methods" class="section">
+    <div class="fig-label"><span>FIG. 8.0</span> METHODS</div>
+    <div class="sec-head reveal"><h2>How I <em>learn</em></h2></div>
+    <div class="testi reveal"><div class="testi-quote" id="testi-quote"></div><div class="testi-person" id="testi-person"></div><div class="testi-dots" id="testi-dots"></div></div>
+    <div class="loss-wrap reveal">
+      <div class="loss-head"><span class="mc-dot"></span> FIG. 5.1 — TRAINING LOSS <em>epochs 0 → 120</em></div>
+      <svg id="loss-svg" viewBox="0 0 900 260" role="img" aria-label="Training loss decreasing over epochs"></svg>
+      <p class="loss-cap">Illustrative of how the work feels: steep at first, then the grind.</p>
+    </div>
+  </section>
+  <!-- ══ EXPERIMENTS ══ -->
+  <section id="experiments" class="section">
+    <div class="fig-label"><span>FIG. 9.0</span> EXPERIMENTS LOG</div>
+    <div class="sec-head reveal"><h2>The <em>experiments</em> notebook</h2><p>Hypothesis, experiment, result. Dated like a lab record — because that is what it is.</p></div>
+    <div class="exp-lead reveal">
+      <p><b>2026 — now:</b> training in public on two tracks — the Deep-ML deep dive and a structured AI engineering curriculum. Dated solves are <b>logged automatically</b> from my repos (badged <span class="auto-badge">AUTO</span>); the entries below them are hand-written experiment notes — hypothesis, result, and what broke.</p>
+    </div>
+    <div class="exp-list" id="exp-list"></div>
+  </section>
+  <!-- ══ LIVE ══ -->
+  <section id="live" class="section">
+    <div class="fig-label"><span>FIG. 10.0</span> LIVE DATA</div>
+    <div class="sec-head reveal"><h2>Updated the moment I <em>push</em></h2><p>Read straight from GitHub on every visit. These numbers are never typed by hand.</p></div>
+    <div class="live-grid">
+      <div class="live-panel reveal">
+        <div class="live-head"><span class="live-dot"></span> DEEP-ML PROGRESS <span class="live-ts" id="live-ts-1">syncing…</span></div>
+        <div class="live-big"><strong id="live-solved">30</strong><span>problems solved</span></div>
+        <div class="live-bars" id="live-diff"></div>
+        <p class="live-latest" id="live-latest"></p>
+        <a class="live-link-sm" href="https://iam-dev-Adarsh.github.io/deep-ml/" target="_blank" rel="noopener">Open the live coverage tracker ↗</a>
+      </div>
+      <div class="live-panel reveal">
+        <div class="live-head"><span class="live-dot"></span> RECENT ACTIVITY <span class="live-ts" id="live-ts-2">syncing…</span></div>
+        <ul class="live-feed" id="live-feed"></ul>
+      </div>
+    </div>
+    <div class="heat-wrap reveal">
+      <div class="live-head"><span class="live-dot"></span> CONTRIBUTION CALENDAR <span class="live-ts" id="heat-ts">syncing…</span></div>
+      <div class="heatmap" id="heatmap"></div>
+      <div class="heat-legend"><span>less</span><i style="background:rgba(10,21,38,.06)"></i><i style="background:rgba(36,54,91,.35)"></i><i style="background:rgba(36,54,91,.65)"></i><i style="background:var(--a2)"></i><i style="background:#8A6A22"></i><span>more</span></div>
+      <p class="heat-note" id="heat-note"></p>
+    </div>
+    <div class="live-repos reveal" id="live-repos"></div>
+  </section>
+  <!-- ══ CONTACT ══ -->
+  <section id="contact" class="section contact">
+    <div class="fig-label"><span>FIG. 11.0</span> CONTACT</div>
+    <div class="sec-head reveal"><h2>Let's build<br/><em>something that learns.</em></h2></div>
+    <form id="contact-form" class="reveal" novalidate>
+      <div class="f-row"><input required name="name" placeholder="Your name *" autocomplete="name"/><input required type="email" name="email" placeholder="Email *" autocomplete="email"/></div>
+      <input name="subject" placeholder="Opportunity, question or idea"/>
+      <textarea required name="msg" rows="4" placeholder="Tell me what you have in mind *"></textarea>
+      <div class="f-actions">
+        <button class="btn magnetic" type="submit">Send message <span>→</span></button>
+        <button class="btn btn-ghost" type="button" id="copy-email">Copy email</button>
+      </div>
+      <p class="form-msg" role="status"></p>
+    </form>
+    <div class="socials reveal" id="socials"></div>
+  </section>
+</main>
+
+<footer>
+  <span>© 2026 <i id="cfg-name3">Adarsh Singh</i> — built from first principles.</span>
+  <a class="foot-hits" href="https://iam-dev-Adarsh.github.io/portfolio" title="Visitor count — privacy-friendly, no cookies"><img src="https://visitor-badge.laobi.icu/badge?page_id=iam-dev-Adarsh.portfolio&amp;left_text=visitors&amp;left_color=0A1526&amp;right_color=B98A2F&amp;right_text_color=FAF8F5" alt="visitors" height="20"></a>
+  <span class="foot-keys"><kbd>T</kbd> theme · <kbd>⌘K</kbd> palette · <kbd>G</kbd> GitHub</span>
+  <div class="swatches" role="group" aria-label="Colour theme"><button class="sw" data-preset="precision" title="Precision Grey — default"></button><button class="sw" data-preset="stone" title="Warm Stone"></button><button class="sw" data-preset="parchment" title="Ink &amp; Parchment"></button></div>
+  <button id="to-top" class="magnetic">↑ Top</button>
+</footer>
+
+<!-- command palette -->
+<div id="palette" class="palette" aria-hidden="true" role="dialog" aria-label="Command palette">
+  <div class="palette-box">
+    <input id="palette-input" type="text" placeholder="Jump to a section, open a link, toggle theme…" autocomplete="off"/>
+    <ul id="palette-list"></ul>
+    <div class="palette-foot"><span><kbd>↑</kbd><kbd>↓</kbd> navigate</span><span><kbd>↵</kbd> run</span><span><kbd>esc</kbd> close</span></div>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="script.js"></script>
+<script src="notes.js"></script>
+<script src="extras.js"></script>
+<script src="demos.js"></script>
+<script src="live.js"></script>
+<script src="stage.js"></script>
+</body>
+</html>
