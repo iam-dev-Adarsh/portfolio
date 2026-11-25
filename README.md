@@ -1,6 +1,6 @@
 # Adarsh Singh — Portfolio
 
-*A living portfolio and self-updating resume for an AI/ML engineer in training.*
+*A colour-burst exhibition and self-updating resume for an AI/ML engineer in training.*
 
 **Live →** [iam-dev-Adarsh.github.io/portfolio](https://iam-dev-Adarsh.github.io/portfolio/)
 
@@ -8,28 +8,42 @@
 
 ## What this is
 
-One page that doesn't just list work — it *reports* it. Every claim points at evidence, and the page keeps itself current as the work grows. Built and maintained in public while training on two paths: the Deep-ML deep dive and a structured AI engineering curriculum.
+A horizontal exhibition you walk through, one wall at a time — and every wall is wired to real work. The design shouts on purpose; the ledger underneath stays honest. Built and maintained in public while training on two paths: the Deep-ML deep dive and a structured AI engineering curriculum.
+
+## The walk
+
+| FIG | Wall | What it says |
+|---|---|---|
+| 0.0 | The exhibition | Who I am, in one line |
+| 1.0 | The thesis | I don't use black boxes. I open them. |
+| 2.0 | The work | Poster cards for each project + an auto-indexed evidence train |
+| 2.5 | The Path | Live Deep-ML depth map + the 11-module curriculum, auto-ticking |
+| 2.75 | The Toolkit | Tools with receipts — plus the bench: what the two paths add next |
+| 3.0 | The numbers | Giant live figures |
+| 3.5 | The lab notes | The experiment log — good or bad, it stays |
+| 4.0 | The human | Who / what / how good / where |
+| 5.0 | The end | Let's build something that learns |
 
 ## What updates itself
 
-- **Project cards** — new public repositories appear automatically, matched and themed by keyword.
-- **Deep-ML stats** — solved problems, difficulty split and scores refresh from the live repo.
-- **Experiment log** — each new solve folder becomes a dated log entry on its own.
-- **Curriculum map** — modules tick themselves off as matching project repos appear.
-- **The living resume** — numbers, dates and links on the resume page patch themselves from the same data. Print-ready A4.
+- every public repository and project folder gets its own card the moment it is pushed
+- Deep-ML solves count up, split by difficulty, and write themselves into the lab notes
+- curriculum modules tick `✓ auto` when a matching project appears on GitHub
+- depth-map chapters light up from the evidence in my repos and solves
+- the visitor badge counts — the exhibition never needs a manual edit
 
-## On the page
+## The fold
 
-- **FIG. 1.0 → 11.0** — an editorial lab-notebook narrative from thesis to contact, with a live "model card" and an honest *in training* status.
-- **Deep-Path depth map** — a 3,185-step deep dive rendered as a fixed map that fills as it progresses.
-- **⌘K command palette**, keyboard shortcuts (`T` themes · `G` GitHub), magic-wand cursor.
-- **Seven gallery themes** — Precision Grey · Warm Stone · Ink & Parchment, and four pigment darks: Payne's Grey · Verdigris · Prado Maroon · Espresso Stone. One gold thread runs through every wall.
-- **The small things** — a 404 that says "lost in latent space", OG cards, a visitor counter, robots + sitemap, and a layout that holds down to 349px.
+The work wall shows the posters and a peek of the evidence; the rest folds behind a *Show all* ghost card. Capstones always lead the peek.
 
-## Craft
+## The resume
 
-Plain HTML, CSS and vanilla JavaScript — no frameworks, no build step, deployed with GitHub Pages. Ink-navy and gold, deep desaturated walls, and text that says only what is true.
+`resume.html` is the quiet A4 ledger — documents read down, exhibitions walk across. Printable, and self-updating from the same data.
+
+## The honest bit
+
+Everything claimed here points at evidence. No invented credentials, no vanity metrics. The training is visible on purpose.
 
 ---
 
-*Built from first principles.* · [GitHub](https://github.com/iam-dev-Adarsh) · [Email](mailto:iamvoid03@gmail.com) · [WhatsApp](https://wa.me/1034884956732)
+*Hand-built: HTML, CSS and JavaScript, no framework. Deploys through GitHub Actions.*

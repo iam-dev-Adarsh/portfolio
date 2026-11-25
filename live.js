@@ -399,6 +399,7 @@
     renderAutoLog(d);
     if (window.__renderTracks) window.__renderTracks(d);
     if (window.__renderStage) window.__renderStage(d);
+    if (window.__renderExhibit) window.__renderExhibit(d);
   }
 
   if (cached?.data) renderAll(cached.data, cached.at, true);
@@ -428,7 +429,7 @@
             raw: x.name,
             repo: workRepos[i].name,
             html_url: `https://github.com/${USER}/${workRepos[i].name}/tree/main/${x.name}`,
-            kind: "build"
+            kind: /capstone/i.test(workRepos[i].name) ? "capstone" : "build"
           });
         });
       });
