@@ -470,7 +470,7 @@ function toggleTheme() {
   document.documentElement.dataset.theme = next;
   try { localStorage.setItem("theme", next); } catch(_){}
 }
-(() => { try { const t=localStorage.getItem("theme"); if(t) document.documentElement.dataset.theme = ["precision","stone","parchment","espresso","navy"].includes(t) ? (t==="navy" ? "precision" : t) : "precision"; } catch(_){} })();
+(() => { try { const t=localStorage.getItem("theme"); if(t) document.documentElement.dataset.theme = ["precision","stone","parchment","espresso","payne","verdigris","prado","navy"].includes(t) ? (t==="navy" ? "precision" : t) : "precision"; } catch(_){} })();
 $("#theme-btn").addEventListener("click", toggleTheme);
 $("#burger").addEventListener("click", () => {
   const open = $("#mobile-menu").classList.toggle("open");

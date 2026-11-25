@@ -43,7 +43,7 @@
   }
 
   /* ─── 5. THEMES — Precision Grey · Warm Stone · Ink & Parchment · Espresso Stone ─── */
-  const THEMES = ["precision", "stone", "parchment", "espresso"];
+  const THEMES = ["precision", "stone", "parchment", "espresso", "payne", "verdigris", "prado"];
   function applyTheme(name) {
     if (!THEMES.includes(name)) name = "precision";
     document.documentElement.dataset.theme = name;
