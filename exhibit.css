@@ -38,7 +38,10 @@ body{
 .exhibit{display:flex;height:100vh;height:100dvh;overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;cursor:grab;scrollbar-width:none}
 .exhibit::-webkit-scrollbar{display:none}
 .exhibit.dragging{cursor:grabbing;scroll-behavior:auto}
-.panel{flex:0 0 auto;height:100%;position:relative;overflow:hidden}
+.panel{flex:0 0 auto;height:100%;position:relative;overflow:hidden;isolation:isolate}
+
+/* gallery grain — printed on paper, not lit on a screen */
+.panel::after{content:"";position:absolute;inset:0;z-index:60;pointer-events:none;opacity:.14;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.55'/%3E%3C/svg%3E");background-size:220px 220px}
 
 /* ── floating pill nav (diana-style) ── */
 .pillnav{position:fixed;top:22px;right:22px;z-index:40;background:#fff;border:2.5px solid var(--ink);border-radius:18px;padding:12px 8px;display:flex;flex-direction:column;width:172px;box-shadow:6px 6px 0 rgba(23,20,27,.9)}
@@ -73,7 +76,14 @@ body{
 .work-row{display:flex;gap:26px;align-items:center}
 .work-card{flex:0 0 340px;height:min(470px,62vh);border:3px solid var(--ink);border-radius:22px;background:#fff;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:var(--ink);transition:.22s}
 .work-card:hover{transform:translateY(-8px) rotate(-.6deg)}
-.work-cover{height:46%;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.work-cover{height:46%;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;flex:0 0 auto;background:var(--bg);color:var(--fg)}
+
+/* four poster recipes cycling across the wall */
+.work-cover.v1{background:linear-gradient(152deg,var(--bg) 0 52%,var(--bg2) 52% 100%)}
+.work-cover.v2{background:var(--canvas);color:var(--ink)}
+.work-cover.v2 .wm{position:absolute;right:-12px;bottom:-46px;z-index:1;font:900 168px/.78 'Archivo',sans-serif;letter-spacing:-.05em;color:var(--bg)}
+.work-card.mini .work-cover.v2 .wm{font-size:104px;bottom:-26px}
+.work-cover.v3{background:var(--ink);color:#F7F4EE}
 .work-cover .big{font:900 2.7rem/1 'Archivo',sans-serif;letter-spacing:-.03em;position:relative;z-index:2;text-align:center;padding:0 10px}
 .work-cover .badge{position:absolute;top:12px;left:14px;z-index:2;font:600 .58rem/1 'IBM Plex Mono',monospace;letter-spacing:.1em;text-transform:uppercase;border:2px solid currentColor;border-radius:999px;padding:.38rem .6rem;opacity:.85}
 .work-meta{padding:18px 22px;display:flex;flex-direction:column;gap:.55rem;flex:1;min-height:0}
@@ -251,6 +261,8 @@ body{
   .p-work{padding:84px 22px}
   .work-row{flex-wrap:wrap;gap:18px}
   .work-card{flex:1 1 260px;height:auto;min-height:420px}
+  .work-cover{height:190px}
+  .work-card.mini .work-cover{height:150px}
   .p-nums{flex-wrap:wrap;gap:36px;padding:84px 22px}
   .p-path,.p-lab{flex-direction:column;align-items:flex-start;gap:28px;padding:84px 22px}
   .p-tools{flex-direction:column;align-items:flex-start;gap:28px;padding:84px 22px}
@@ -274,10 +286,10 @@ body{
   .work-head,.nums-head,.auto-note{position:static;margin-bottom:1.2rem}
   .auto-note{margin-top:1.4rem}
   .cover-inner .mega{font-size:clamp(2.5rem,11.5vw,3.6rem)}
-  .p-cover .sh.r1{left:auto!important;right:-90px!important;top:56%!important}
-  .p-cover .sh.t1{top:1%!important;left:74%!important;transform:rotate(18deg) scale(.5)!important}
-  .p-thesis .sh.c1,.p-lab .sh.c1,.p-me .sh.c1,.p-contact .sh.c1,.p-tools .sh.c1{top:1%!important;left:auto!important;right:-35px!important;transform:scale(.65)!important}
-  .p-tools .sh.p1{top:1%!important;left:auto!important;right:-30px!important;transform:rotate(-8deg) scale(.6)!important}
+  .p-cover .sh.r1{left:auto!important;right:-72px!important;top:50%!important}
+  .p-cover .sh.t1{top:44%!important;left:6%!important;transform:rotate(18deg)!important}
+  .p-thesis .sh.c1,.p-lab .sh.c1,.p-me .sh.c1,.p-contact .sh.c1,.p-tools .sh.c1{top:2%!important;left:auto!important;right:-48px!important;transform:none!important}
+  .p-tools .sh.p1{top:1%!important;left:auto!important;right:-34px!important;transform:rotate(-8deg) scale(.8)!important}
   .plate,.tool-card,.exp-item,.work-card,.more-card,.me-col{position:relative;z-index:2}
   .work-card{transition:none}
   .dp-zone{flex-direction:column;gap:6px}
@@ -287,7 +299,7 @@ body{
   .pillnav a{font-size:.62rem;padding:.32rem .66rem;flex:none;border-width:1.5px}
   .pillnav a span{display:none}
   .dots,.scrollhint{display:none}
-  .sh{opacity:.85}
+  .sh{opacity:1}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition:none!important;animation:none!important}

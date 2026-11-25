@@ -111,10 +111,14 @@
 
   function cardHTML(o, i) {
     const [bg, fg] = POPS[i % POPS.length];
+    const [bg2] = POPS[(i + 2) % POPS.length];
+    const v = i % 4;
+    const letter = ((o.title || "·").trim().charAt(0) || "·").toUpperCase();
     return `
       <a class="work-card${o.mini ? " mini" : ""}${o.hidden ? " hidden-card" : ""}" href="${esc(o.link)}" target="_blank" rel="noopener">
-        <div class="work-cover" style="background:${bg};color:${fg}">
+        <div class="work-cover v${v}" style="--bg:${bg};--bg2:${bg2};--fg:${fg}">
           ${SHAPES[i % SHAPES.length]}
+          ${v === 2 ? `<span class="wm" aria-hidden="true">${esc(letter)}</span>` : ""}
           <span class="badge">${esc(o.badge)}</span>
           <div class="big">${esc(o.metric)}</div>
         </div>

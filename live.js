@@ -435,6 +435,9 @@
       });
     }
     const live = [progR,reposR,fpR,ppR].some(r=>r.status==="fulfilled");
+    /* if every fetch failed but we have a cached paint, keep it —
+       a rate-limited moment must never empty the evidence wall */
+    if (!live && cached?.data) return;
     const at = Date.now();
     if (live) try { localStorage.setItem(CACHE, JSON.stringify({at,data:d})); } catch {}
     renderAll(d, at, !live);
