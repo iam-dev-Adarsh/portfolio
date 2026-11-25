@@ -94,7 +94,7 @@ const CONFIG = {
     {
       icon:"⚙️", cat:"found", label:"From Scratch",
       title:"The First Principle — ML From Scratch",
-      desc:"12 algorithms rebuilt without library shortcuts — gradient descent, linear/logistic/softmax regression, KNN, trees, forests, SVM, XGBoost, k-means, naive Bayes and Q-learning. Each with a derivation, a runnable script and a captured run.",
+      desc:"13 algorithms rebuilt without library shortcuts — gradient descent, linear/logistic/softmax regression, KNN, trees, forests, SVM, XGBoost, k-means, naive Bayes, Q-learning and PCA. Each with a derivation, a runnable script and a captured run.",
       tags:["NumPy","Classical ML","From Scratch"], year:"2026",
       repo:"The-first-prinicple",
       link:"https://github.com/iam-dev-Adarsh/The-first-prinicple",

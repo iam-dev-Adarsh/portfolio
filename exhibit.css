@@ -242,10 +242,12 @@ body{
 @keyframes wave{from{transform:rotate(-118deg)}to{transform:rotate(-152deg)}}
 
 @media (max-width:760px){
-  body{overflow:auto}
+  body{overflow-y:auto;overflow-x:hidden}
   .exhibit{flex-direction:column;height:auto;overflow:visible;cursor:auto}
-  .panel{width:100%!important;min-width:0!important;height:auto;min-height:88vh;padding:84px 22px}
+  .panel{width:100%!important;min-width:0!important;height:auto;min-height:88vh;padding:84px 22px;overflow:hidden}
   .p-cover,.p-thesis,.p-contact{min-height:100vh}
+  .p-contact{min-height:140vh}
+  .p-contact .mega{font-size:clamp(2.5rem,10vw,3.4rem)}
   .p-work{padding:84px 22px}
   .work-row{flex-wrap:wrap;gap:18px}
   .work-card{flex:1 1 260px;height:auto;min-height:420px}
@@ -271,7 +273,19 @@ body{
   .robot{--bot-scale:.72}
   .work-head,.nums-head,.auto-note{position:static;margin-bottom:1.2rem}
   .auto-note{margin-top:1.4rem}
-  .pillnav{display:none}
+  .cover-inner .mega{font-size:clamp(2.5rem,11.5vw,3.6rem)}
+  .p-cover .sh.r1{left:auto!important;right:-90px!important;top:56%!important}
+  .p-cover .sh.t1{top:1%!important;left:74%!important;transform:rotate(18deg) scale(.5)!important}
+  .p-thesis .sh.c1,.p-lab .sh.c1,.p-me .sh.c1,.p-contact .sh.c1,.p-tools .sh.c1{top:1%!important;left:auto!important;right:-35px!important;transform:scale(.65)!important}
+  .p-tools .sh.p1{top:1%!important;left:auto!important;right:-30px!important;transform:rotate(-8deg) scale(.6)!important}
+  .plate,.tool-card,.exp-item,.work-card,.more-card,.me-col{position:relative;z-index:2}
+  .work-card{transition:none}
+  .dp-zone{flex-direction:column;gap:6px}
+  .dp-zname{flex:none}
+  .pillnav{display:flex!important;position:fixed;top:0;left:0;right:0;z-index:50;flex-direction:row;flex-wrap:nowrap;overflow-x:auto;width:auto;gap:6px;padding:10px 12px;background:rgba(242,240,235,.94);border:none;border-bottom:2px solid var(--ink);border-radius:0;box-shadow:none;scrollbar-width:none}
+  .pillnav::-webkit-scrollbar{display:none}
+  .pillnav a{font-size:.62rem;padding:.32rem .66rem;flex:none;border-width:1.5px}
+  .pillnav a span{display:none}
   .dots,.scrollhint{display:none}
   .sh{opacity:.85}
 }

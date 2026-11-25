@@ -90,7 +90,7 @@
   /* honest headline metrics per curated project */
   const METRICS = {
     "Deep-ML — Practice Kernel": "30 solved",
-    "The First Principle — ML From Scratch": "12 algos",
+    "The First Principle — ML From Scratch": "13 algos",
     "Shakespeare Text Generator (LSTM)": "1.1M chars",
     "Self-Driving Car — NEAT NeuroEvolution": "2,604→6,245",
     "CIFAR-10 Image Classifier (CNN)": "63.32%",

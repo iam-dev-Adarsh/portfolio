@@ -18,7 +18,7 @@
   const CURATED_REPOS = new Set((window.CONFIG?.projects || []).map(p => p.repo).filter(Boolean));
 
   const FALLBACK = {
-    solved: 30, diff: {easy:13, medium:14, hard:3}, algos: 12, projects: 4, repos: 3,
+    solved: 30, diff: {easy:13, medium:14, hard:3}, algos: 13, projects: 4, repos: 5,
     latest: {title:"Least-Norm Solution of an Underdetermined System", at:"2026-11-22T16:45:07Z", difficulty:"medium"},
     events: [],
     repoList: [
