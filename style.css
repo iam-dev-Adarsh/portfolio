@@ -449,16 +449,19 @@ kbd{font-family:var(--mono);font-size:.72rem;padding:.15rem .45rem;border:1px so
 .pr-fg{fill:none;stroke:url(#ringGrad);stroke:var(--a2);stroke-width:3;stroke-linecap:round;transition:stroke-dashoffset .15s linear}
 
 /* ── theme swatches ── */
-.swatches{display:flex;gap:.45rem;align-items:center}
-.sw{width:22px;height:22px;border-radius:50%;border:2px solid var(--line2);transition:.25s}
-.sw[data-preset=precision]{background:linear-gradient(135deg,#D8DAE0,#0A1526)}
-.sw[data-preset=stone]{background:linear-gradient(135deg,#EDE9E2,#B98A2F)}
-.sw[data-preset=parchment]{background:linear-gradient(135deg,#26221E,#6B1C2A)}
-.sw[data-preset=espresso]{background:linear-gradient(135deg,#211C17,#C99B3F)}
-.sw[data-preset=payne]{background:linear-gradient(135deg,#1F252D,#C99B3F)}
-.sw[data-preset=verdigris]{background:linear-gradient(135deg,#1A2622,#C99B3F)}
-.sw[data-preset=prado]{background:linear-gradient(135deg,#2B1618,#C99B3F)}
-.sw:hover,.sw.active{border-color:var(--text);transform:scale(1.12)}
+.swatches{display:flex;gap:.65rem .85rem;flex-wrap:wrap;align-items:flex-start}
+.sw{display:flex;flex-direction:column;align-items:center;gap:.34rem;width:58px;padding:0;background:none;border:0}
+.sw .dot{width:22px;height:22px;border-radius:50%;border:2px solid var(--line2);transition:.25s}
+.sw .nm{font-family:var(--mono);font-size:.55rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:center;line-height:1.35;transition:.25s}
+.sw:hover .dot,.sw.active .dot{border-color:var(--text);transform:scale(1.12)}
+.sw:hover .nm,.sw.active .nm{color:var(--text)}
+.sw[data-preset=precision] .dot{background:linear-gradient(135deg,#EDEEF1 0 50%,#0A1526 50% 100%)}
+.sw[data-preset=stone] .dot{background:linear-gradient(135deg,#EDE9E2 0 50%,#B98A2F 50% 100%)}
+.sw[data-preset=parchment] .dot{background:linear-gradient(135deg,#F7F3EA 0 50%,#6B1C2A 50% 100%)}
+.sw[data-preset=espresso] .dot{background:linear-gradient(135deg,#211C17 0 50%,#C99B3F 50% 100%)}
+.sw[data-preset=payne] .dot{background:linear-gradient(135deg,#1F252D 0 50%,#C99B3F 50% 100%)}
+.sw[data-preset=verdigris] .dot{background:linear-gradient(135deg,#1A2622 0 50%,#C99B3F 50% 100%)}
+.sw[data-preset=prado] .dot{background:linear-gradient(135deg,#2B1618 0 50%,#C99B3F 50% 100%)}
 
 /* ── metrics strip ── */
 .metrics-strip{display:flex;flex-wrap:wrap;gap:.6rem 1.8rem;margin-top:2.2rem;padding:1.15rem 1.4rem;border:1px solid var(--line);border-radius:18px;background:var(--card);font-family:var(--mono);font-size:.8rem;color:var(--muted)}
