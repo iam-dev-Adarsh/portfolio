@@ -42,8 +42,8 @@
     addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
   }
 
-  /* ─── 5. THEMES — Precision Grey · Warm Stone · Ink & Parchment ─── */
-  const THEMES = ["precision", "stone", "parchment"];
+  /* ─── 5. THEMES — Precision Grey · Warm Stone · Ink & Parchment · Espresso Stone ─── */
+  const THEMES = ["precision", "stone", "parchment", "espresso"];
   function applyTheme(name) {
     if (!THEMES.includes(name)) name = "precision";
     document.documentElement.dataset.theme = name;
