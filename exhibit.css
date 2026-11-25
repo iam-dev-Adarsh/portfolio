@@ -233,6 +233,14 @@ body{
 @keyframes bob{from{transform:translateY(0)}to{transform:translateY(-5px)}}
 @keyframes wiggle{from{transform:rotate(-9deg)}to{transform:rotate(9deg)}}
 
+/* the exit: same walker, smiling and waving goodbye */
+.robot.leaving{animation:exitWalk 32s linear infinite}
+@keyframes exitWalk{0%{transform:translateX(-160px) scale(var(--bot-scale))}78%{transform:translateX(112vw) scale(var(--bot-scale))}100%{transform:translateX(112vw) scale(var(--bot-scale))}}
+.robot.leaving .bot-head{padding-bottom:12px}
+.robot.leaving .smile{position:absolute;width:22px;height:11px;border:3.5px solid var(--ink);border-top:none;border-radius:0 0 16px 16px;left:50%;bottom:8px;transform:translateX(-50%);box-sizing:border-box}
+.robot.leaving .arm-r{animation:wave 1.4s ease-in-out infinite alternate}
+@keyframes wave{from{transform:rotate(-118deg)}to{transform:rotate(-152deg)}}
+
 @media (max-width:760px){
   body{overflow:auto}
   .exhibit{flex-direction:column;height:auto;overflow:visible;cursor:auto}
